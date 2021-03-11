@@ -1,0 +1,250 @@
+:root {
+  --responsivew: 100%;
+  --laptoph: 600px;
+  --bgcolor: transparent;
+  --framecolor: rgb(2, 2, 2);
+  --glow: linear-gradient(white, rgba(24, 9, 24, 0.3));
+  --bgcolornote: grey;
+  --notecolor: white;
+  --generalfontcolor: rgb(98, 64, 160);
+  --bgcolorframe: white;
+}
+body {
+  background-color: var(--bgcolor);
+  display: grid;
+  grid-template-areas:
+    "content1"
+    "content2 content2"
+    "content3 content4"
+    "content3 content5"
+    "content3 content6";
+  left: auto;
+  top: auto;
+  align-items: center;
+  background-image: url("../images/texture.jfif");
+}
+header h1 {
+  margin-top: 10vh;
+  color: var(--generalfontcolor);
+  position: relative;
+  text-align: center;
+  font-size: 300%;
+}
+header p {
+  color: var(--framecolor);
+  position: relative;
+  text-align: center;
+  margin: 3vh;
+}
+
+/*****************************************************************/
+
+/* Styling the navigation bar */
+
+#navbar {
+  height: 5vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: sticky;
+  left: 0;
+  top: 0;
+  background-color: darkgrey;
+  border-style: ridge;
+  border: 3px ridge brown;
+  justify-items: center;
+
+  z-index: 1;
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  left: 0;
+  top: 0;
+  background-color: var(--bgcolor);
+  border-style: ridge;
+  border: 3px ridge var(--framecolor);
+  border-radius: 5px;
+}
+
+/* Styling the navigation links */
+
+.nav-link {
+  text-decoration: none;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: brown;
+  color: cornsilk;
+  font-size: large;
+  margin-right: 0px;
+  margin-left: 0px;
+  font-size: large;
+}
+.nav-link:hover {
+  background-color: var(--bgcolor);
+  opacity: 0.9;
+  border: 3px solid var(--framecolor);
+  color: black;
+}
+
+/*****************************************************************/
+
+/* Arranging the main-section */
+
+.main-section {
+  height: fit-content;
+  width: 79vw;
+  background-color: var(--bgcolor);
+  left: 20vw;
+  top: -100vh;
+  position: relative;
+  padding-top: 1vh;
+  padding-left: 1vw;
+  border: 3px ridge black;
+}
+
+/*****************************************************************/
+/*welcome-section styling*/
+#welcome-section {
+  height: 100vh;
+  position: relative;
+}
+
+.about-me,
+li,
+.contact-me {
+  font-size: 150%;
+  margin-left: 2vw;
+}
+ul {
+  list-style-type: disc;
+}
+
+.profile-photo {
+  width: 25%;
+  align-self: center;
+}
+/*****************************************************************/
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "first-project first-project"
+    "content2 content3"
+    "content4 content5";
+}
+
+.first-project {
+  grid-area: "content1";
+}
+/* Styling the project tiles */
+.project-tile {
+  border-style: dotted;
+  border-color: var(--framecolor);
+  color: var(--generalfontcolor);
+  position: relative;
+  width: var(--responsivew);
+  height: fit-content;
+  margin-bottom: 5vh;
+  margin-top: 3vh;
+  padding-top: 4vh;
+}
+.project-tile h2 {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--framecolor);
+  position: absolute;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  left: 5%;
+  top: -25px;
+  width: 90%;
+  height: 50px;
+  background-color: var(--bgcolorframe);
+  font-size: 200%;
+}
+
+#maxwidth {
+  width: 100%;
+}
+
+/*Styling the images of the portfolio*/
+.portfolio-image {
+  width: 90%;
+  border-radius: 1vw;
+  background-image: var(--glow);
+  /* margin: 10px;
+  margin-top: 30%;
+  margin-bottom: 2.5%;
+  padding: 1vw; */
+}
+
+/*styling the project note*/
+
+.project-note {
+  border-style: solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-color: var(--bgcolornote);
+  color: var(--notecolor);
+  position: absolute;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  left: -1%;
+  top: 50%;
+  width: 25%;
+  height: 5vh;
+  background-color: var(--bgcolornote);
+  font-size: 100%;
+}
+
+/* .project-note::after {
+  content: "";
+  border-style: solid;
+  border-color: var(--bgcolornote);
+  background-color: var(--bgcolornote);
+
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  left: 25%;
+  height: 5vh;
+} */
+
+/*****************************************************************/
+/* Contact me section*/
+
+/* Profile link image */
+.profile-link-image {
+  width: 3vw;
+  height: 3vw;
+}
+
+/*****************************************************************/
+/* Responsive styling */
+
+/*for tablets*/
+@media screen and (max-width: 768px) {
+  :root {
+    --repitition: 2;
+  }
+}
+
+/*for phones*/
+
+@media screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+
+/*End Styling*/
+/*****************************************************************/
