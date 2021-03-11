@@ -18,12 +18,15 @@ body {
   align-items: center;
   background-image: url("../images/texture.jfif");
 }
-header h1 {
-  margin-top: 10vh;
+header h1,
+#projects h1,
+#contact h1 {
+  margin-top: 5vh;
+  margin-bottom: 2vh;
   color: var(--generalfontcolor);
   position: relative;
   text-align: center;
-  font-size: 300%;
+  font-size: 250%;
 }
 header p {
   color: var(--framecolor);
@@ -111,10 +114,14 @@ ul {
   display: grid;
   /* grid-template-columns: var(--repititionresponsive); */
   grid-template-areas:
+    "h1 h1"
     "content1 content1"
     /* "content1 content1" */
     "content2 content3"
     "content4 content5";
+}
+#projects h1 {
+  grid-area: h1;
 }
 
 /* Styling the project tiles and the header of the project tile*/
@@ -193,6 +200,7 @@ ul {
 @media screen and (max-width: 768px) {
   #projects {
     grid-template-areas:
+      "h1 h1"
       "content1 content2"
       "content3 content4"
       "content5 content6";
@@ -212,6 +220,9 @@ ul {
   ul {
     margin-left: 3vw;
   }
+  h1 {
+    font-size: 200%;
+  }
 }
 
 /*for phones*/
@@ -219,6 +230,7 @@ ul {
 @media screen and (max-width: 600px) {
   #projects {
     grid-template-areas:
+      "h1"
       "content1"
       "content2"
       "content3"
@@ -239,6 +251,9 @@ ul {
   }
   ul {
     margin-left: 3vw;
+  }
+  h1 {
+    font-size: 150%;
   }
 }
 
