@@ -1,35 +1,51 @@
-# MarkForesterPortfolio
+# Mark Forester's Portfolio.
 
-## First Commit:
+## License
 
-Added read me file.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Second Commit:
+## Contents
 
-Added assets folder, css, images.
-Added index.html.
-Added basic information to the page.
-Added Projects Links.
-Added Background Image.
-Added Contact Information.
-Added Profile Image.
-Added GitHub and LinkedIn links.
+• [License](#license)
+• [Description](#description)
+• [Technologies](#technologies)
+• [Links](#links)
+• [Questions](#questions)
 
-Styled Project Tiles.
-Styled Navigation Bar.
-Styled Information Paragraphs.
-Styled the project notes.
-Styled the bigger project image.
+## Description
 
-## Third Commit:
+This website showcases my work, my roles on the projects that I participated in, my contact information and a link to my resume.
 
-Deployed webpage: https://forester93.github.io/MarkForesterPortfolio/.
-Added Responsiveness to Phones.
-Added Responsiveness to Tablets.
-Removed redundant comments out of the CSS file.
+### Technologies
 
-## Fourth Commit:
+I am quite proficient in using the following technologies:
 
-Final check of page functionality against acceptance criteria.
-Adjusted some elements with responsiveness for better visuals.
-Removed Redundant /scripts folder
+• HTML5  
+• CSS  
+• JavaScript  
+• JQuery  
+• Bootstrap  
+• NodeJS  
+• MySQL
+
+## Links
+
+### Link to the Deployed Webpage
+
+[Mark Forester's Portfolio Deployed Webpage](https://Forester93.github.io/MarkForesterPortfolio/)
+
+### Link to the Github Repository
+
+[Mark Forester's Portfolio Github Repo](https://github.com/Forester93/MarkForesterPortfolio/)
+
+### Screenshot of the Application
+
+![Screenshot of the page](./assets/images/screenshot.png)
+
+## Questions
+
+You can reach out to me over one of the following for any questions about this application.
+
+| Name          | Email                    | Phone Numer         | GitHubProfile                                                  |
+| ------------- | ------------------------ | ------------------- | -------------------------------------------------------------- |
+| Mark Forester | markforester93@gmail.com | +61-(0)-404-831-362 | [Mark Forester Github Profile](https://github.com/Forester93/) |

@@ -5,6 +5,7 @@
   --themeColor2: rgb(72, 61, 139, 0.1);
   --themeColor3: #f0fff0;
   --themeColor4: black;
+  --themeColor5: white;
 }
 html {
   scroll-behavior: smooth;
@@ -19,10 +20,9 @@ html {
   width: 1350px;
   margin: auto;
 }
-/* ======================  Common stylings ====================== */
 .logo,
 .logo-2 {
-  font-size: 75px;
+  font-size: 58px;
   font-weight: 600;
   font-family: "Roboto", cursive;
   color: var(--themeColor3);
@@ -30,6 +30,14 @@ html {
 .logo span,
 .logo-2 span {
   color: var(--themeColor1);
+}
+.home-content {
+  border-width: 18px;
+  border-color: var(--themeColor5);
+  border-style: solid;
+  padding: 10px;
+  background-color: var(--themeColor4);
+  width: 45vw;
 }
 button {
   background: var(--themeColor1);
@@ -105,7 +113,7 @@ button:hover {
 .home .home-content button {
   display: inline-block;
   background: var(--themeColor1);
-  color: white;
+  color: var(--themeColor5);
   padding: 12px 20px;
   font-size: 25px;
   margin: 20px 15px 0 0;
@@ -115,7 +123,7 @@ button:hover {
 
 footer {
   background-color: var(--themeColor1);
-  color: white;
+  color: var(--themeColor5);
   text-align: center;
   font-size: 18px;
   padding: 25px 0;
@@ -185,15 +193,19 @@ footer {
 li,
 .contact-me {
   font-size: 150%;
-  margin-left: 2vw;
 }
 ul {
   list-style-type: disc;
+  margin-left: 50px;
 }
 
-.profile-photo {
-  width: 35%;
-  align-self: center;
+ul li {
+  color: var(--themeColor5);
+  margin-left: 50px;
+}
+
+.separator {
+  width: 120%;
 }
 
 /*****************************************************************/
@@ -327,6 +339,13 @@ ul {
 /*for phones*/
 
 @media screen and (max-width: 600px) {
+  .home-content {
+    margin-left: -10vw;
+    padding: 1vw;
+    width: fit-content;
+    font-size: small;
+    align-self: center;
+  }
   #projects {
     grid-template-areas:
       "h1"
