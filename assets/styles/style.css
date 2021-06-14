@@ -210,6 +210,88 @@ ul li {
 
 /*****************************************************************/
 
+.box-2 {
+  border-radius: 5px;
+  align-content: center;
+  width: 100%;
+}
+.box-2 .card .updateBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.box-2 .card .updateBtn span {
+  text-align: left;
+}
+.box-2 .card {
+  width: 500px;
+  height: 600px;
+  padding: 15px;
+  border-radius: 8px;
+  align-items: flex-start;
+  background-color: var(--themeColor3);
+  cursor: pointer;
+  overflow-y: scroll;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.box-2 .card:hover {
+  animation-duration: 0.75s;
+  animation-name: glow-black;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.box-2 .card .num {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: 2px dashed cadetblue;
+}
+
+.box-2 .card a {
+  margin-top: auto;
+  text-decoration: none;
+  background: var(--themeColor1);
+  color: white;
+  padding: 6px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.box-2 .card a:hover {
+  color: var(--themeColor1);
+  border: 1px solid var(--themeColor1);
+  background-color: var(--themeColor2);
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 10px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid var(--themeColor1) !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: var(--themeColor1) !important;
+}
+/***********************************************/
 #projects,
 #repositories {
   display: grid;

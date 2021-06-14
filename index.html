@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
     <title>Mark Forester Portfolio</title>
@@ -54,57 +59,62 @@
             <li>I speak three languages.</li>
             <li>I get very competitive at times!</li>
             <li>ENTP</li>
+        </ul> <br>
+        </p>
+        <p class="about-me text-2">
+            Here's a list of development technologies which I am proficient in using:
+        <ul>
+            <li>HTML5</li>
+            <li>Javascript ES6</li>
+            <li>TDD (Test Driven Development)</li>
+            <li>NodeJS / Express / Sequelize for Backend Applications</li>
+            <li>CSS / Bootstrap</li>
+            <li>MySQL</li>
         </ul>
         <br>
         </p>
-        <p class='about-me text-2'>
-            Below is a list of projects that I have worked on so far.
-        </p>
-        <br><br>
     </section>
     <!-- Portfolio Projects Section -->
-    <!-- <section class="main-section" id="projects">
-        <h1>Portfolio Items</h1>
-        <article class="project-tile first-project">
-            <h2>Famous Artist Tribute Page</h2>
-            <a href="https://forester93.github.io/robin-williams-tribute/" target='_blank'>
-                <img class='portfolio-image first-image' src='./assets/images/tribute-page.png'
-                    alt='Image of tribute-page website'>
-            </a>
-            <p class='project-note'>HTML/CSS</p>
-        </article>
-        <article class="project-tile">
-            <h2>Survey Form</h2>
-            <a href="https://forester93.github.io/SurveryForm/" target='_blank'>
-                <img class='portfolio-image' src='./assets/images/survery-form.png' alt='Image of a survery form'>
-            </a>
-            <p class='project-note'>HTML/CSS</p>
-        </article>
-        <article class="project-tile">
-            <h2>Product Landing Page</h2>
-            <a href="https://forester93.github.io/Oud/" target='_blank'>
-                <img class='portfolio-image' src='./assets/images/product-landing-page.png'
-                    alt='Image of a product landing page'>
-            </a>
-            <p class='project-note'>HTML/CSS</p>
-        </article>
-        <article class="project-tile">
-            <h2>Technical Documentation Template</h2>
-            <a href="https://forester93.github.io/technical-documentation-template/" target='_blank'
-                alt='Image of a technical documentation website'>
-                <img class='portfolio-image' src='./assets/images/technical-documentation.png'>
-            </a>
-            <p class='project-note'>HTML/CSS</p>
-        </article>
-        <article class="project-tile">
-            <h2>Code Refactor for Horiseon</h2>
-            <a href="https://forester93.github.io/horiseon-solution-services/" target='_blank'
-                alt='Image of a website where I did code refactoring'>
-                <img class='portfolio-image' src='./assets/images/code-refactor.png'>
-            </a>
-            <p class='project-note'>Code Refactor</p>
-        </article>
-    </section> -->
+    <section class="main-section align-items-center" id="projects">
+
+        <p class='about-me text-2'>
+            Here are my ongoing/finished projects
+        </p>
+        <br>
+
+        <div class="box-2 align-items-center">
+            <div class="max-width">
+                <div class="carousel 
+        owl-carousel
+        ">
+                    <article class="card">
+                        <h2>Famous Artist Tribute Page</h2>
+                        <a href="https://forester93.github.io/robin-williams-tribute/" target='_blank'>
+                            <img class='portfolio-image first-image' src='./assets/images/tribute-page.png'
+                                alt='Image of tribute-page website'>
+                        </a>
+                        <p class='project-note'>HTML/CSS</p>
+                    </article>
+                    <article class="card">
+                        <h2>Survey Form</h2>
+                        <a href="https://forester93.github.io/SurveryForm/" target='_blank'>
+                            <img class='portfolio-image' src='./assets/images/survery-form.png'
+                                alt='Image of a survery form'>
+                        </a>
+                        <p class='project-note'>HTML/CSS</p>
+                    </article>
+                    <article class="card">
+                        <h2>Product Landing Page</h2>
+                        <a href="https://forester93.github.io/Oud/" target='_blank'>
+                            <img class='portfolio-image' src='./assets/images/product-landing-page.png'
+                                alt='Image of a product landing page'>
+                        </a>
+                        <p class='project-note'>HTML/CSS</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="main-section container-fluid" id="repositories">
         <h1 class="text-2">List of Github Repositories</h1>
@@ -158,9 +168,6 @@
         <span>Created By NewCorp Solutions | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 <script src="./assets/scripts/index.js"></script>
 <script src="./assets/scripts/typing.js"></script>

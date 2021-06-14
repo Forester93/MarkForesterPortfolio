@@ -44,3 +44,32 @@ getRepos(
   "the-code-tree",
   "forester93"
 );
+
+$(document).ready(function () {
+  $(".carousel").owlCarousel({
+    loop: true,
+    autoplayTimeOut: 2000,
+    autoplayHoverPause: true,
+    autoHeight: true,
+    margin: 30,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      314: {
+        items: 1,
+        nav: false,
+      },
+      668: {
+        items: 2,
+        nav: false,
+      },
+      // 1250: {
+      //   items: 3,
+      //   nav: false,
+      // },
+    },
+  });
+});
