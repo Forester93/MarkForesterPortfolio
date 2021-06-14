@@ -1,44 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
 :root {
-  --responsivew: 100%;
-  --laptoph: 600px;
-  --bgcolor: transparent;
-  --framecolor: rgb(2, 2, 2);
-  --glow: linear-gradient(white, rgba(24, 9, 24, 0.3));
-  --bgcolornote: grey;
-  --notecolor: white;
-  --generalfontcolor: rgb(98, 64, 160);
-  --bgcolorframe: white;
-  /* --repititionresponsive: 2fr 1fr 1fr 1fr 1fr; */
+  --themeColor1: rgb(72, 61, 139, 0.9);
+  --themeColor2: rgb(72, 61, 139, 0.1);
+  --themeColor3: #f0fff0;
+  --themeColor4: black;
 }
-body {
-  background-color: var(--bgcolor);
-  display: grid;
-  left: auto;
-  top: auto;
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.max-width {
+  width: 1350px;
+  margin: auto;
+}
+/* ======================  Common stylings ====================== */
+.logo,
+.logo-2 {
+  font-size: 75px;
+  font-weight: 600;
+  font-family: "Roboto", cursive;
+  color: var(--themeColor3);
+}
+.logo span,
+.logo-2 span {
+  color: var(--themeColor1);
+}
+button {
+  background: var(--themeColor1);
+  color: white;
+  padding: 6px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+button:hover {
+  color: var(--themeColor1);
+  border: 1px solid var(--themeColor1);
+  background-color: var(--themeColor2);
+}
+.header {
+  display: flex;
   align-items: center;
-  background-image: url("../images/texture.jfif");
+  justify-content: space-between;
+  width: 100%;
+  z-index: 999;
+  padding: 0 25px;
+  background-color: var(--themeColor1);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
 }
-header h1,
-#projects h1,
-#contact h1 {
-  margin-top: 5vh;
-  margin-bottom: 2vh;
-  color: var(--generalfontcolor);
-  position: relative;
-  text-align: center;
-  font-size: 250%;
+.header .menu {
+  margin: 15px 0;
 }
-header p {
-  color: var(--framecolor);
-  position: relative;
+.header .menu li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 20px;
+}
+.header .menu li a {
+  display: block;
+  border-radius: 5px;
+  padding: 5px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.header .menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.home {
+  display: flex;
+  background: url("../images/collaged1.jpg") no-repeat center;
+  height: 100vh;
+  color: var(--themeColor4);
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+  font-size: 25px;
+}
+
+.text-2 {
+  font-size: 35px;
+  margin: 5px 0;
+  color: var(--themeColor3);
+}
+.text-2 span {
+  color: var(--themeColor1);
+  font-weight: bolder;
+}
+.home .home-content button {
+  display: inline-block;
+  background: var(--themeColor1);
+  color: white;
+  padding: 12px 20px;
+  font-size: 25px;
+  margin: 20px 15px 0 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: var(--themeColor1);
+  color: white;
   text-align: center;
-  margin: 3vh;
+  font-size: 18px;
+  padding: 25px 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*****************************************************************/
 
 /* Styling the navigation bar */
-
+/* 
 #navbar {
   z-index: 1;
   height: 100vh;
@@ -56,7 +143,7 @@ header p {
 
 /* Styling the navigation links */
 
-.nav-link {
+/* .nav-link {
   text-decoration: none;
   text-align: center;
   padding-top: 15px;
@@ -74,6 +161,7 @@ header p {
   border: 3px solid var(--framecolor);
   color: black;
 }
+*/
 
 /*****************************************************************/
 
@@ -81,14 +169,14 @@ header p {
 
 .main-section {
   height: fit-content;
-  width: 79vw;
-  background-color: var(--bgcolor);
-  left: 20vw;
-  top: -100vh;
+  /* width: 79vw; */
+  background-color: var(--themeColor4);
+  /* left: 20vw;
+  top: -100vh; */
   position: relative;
   padding-top: 1vh;
   padding-left: 1vw;
-  border: 3px ridge black;
+  border: 3px ridge var(--themeColor4);
 }
 
 /*****************************************************************/
@@ -191,8 +279,13 @@ ul {
 
 /* Profile link image */
 .profile-link-image {
-  width: 3vw;
-  height: 3vw;
+  width: 60px;
+  height: 60px;
+}
+
+.contact-btn {
+  width: 120px;
+  height: 120px;
 }
 
 /*****************************************************************/
@@ -225,6 +318,10 @@ ul {
   h1 {
     font-size: 200%;
   }
+  .home {
+    background-image: none;
+    background-color: var(--themeColor4);
+  }
 }
 
 /*for phones*/
@@ -256,6 +353,10 @@ ul {
   }
   h1 {
     font-size: 150%;
+  }
+  .home {
+    background-image: none;
+    background-color: var(--themeColor4);
   }
 }
 

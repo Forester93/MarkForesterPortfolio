@@ -15,10 +15,11 @@ async function getRepos(user, ...exclude) {
                 $("<a>")
                   .attr("href", `https://www.github.com/${user}/${item.name}`)
                   .attr("target", "_blank")
-                  .html(
-                    `<i class="fa fa-cubes" aria-hidden="true"></i> ${item.name}`
+                  .append(
+                    $("<button>").html(
+                      `<i class="fas fa-arrow-right"  aria-hidden="true"></i> ${item.name}`
+                    )
                   )
-                  .addClass("btn btn-success p-1 m-3 w-50")
                   .css("font-size", "large")
               );
 
@@ -38,5 +39,8 @@ getRepos(
   "prework-about-me",
   "Tabled",
   "technical-documentation-template",
-  "horiseon-solution-services"
+  "horiseon-solution-services",
+  "MarkForesterPortfolio",
+  "the-code-tree",
+  "forester93"
 );
