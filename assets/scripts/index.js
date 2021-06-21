@@ -73,3 +73,93 @@ $(document).ready(function () {
     },
   });
 });
+
+$("#example").remove();
+
+{
+  /* <div class="card" id="example">
+<img class="card-img-top" src="..." alt="Card image cap">
+<div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+        to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div> */
+}
+
+for (let project of projects) {
+  $("#projectsCarousel").append(
+    $("<div>")
+      .addClass("card")
+      .append(
+        $("<img>")
+          .addClass("card-img-top")
+          .attr(
+            "src",
+            `./assets/images/screenshot(${projects.indexOf(project)}).png`
+          )
+      )
+      .append(
+        $("<div>")
+          .addClass("card-body")
+          .append($("<h5>").addClass("card-title").text(project.name))
+          .append(
+            $("<p>")
+              .addClass("card-text")
+              .text(`Project Description: ${project.description}`)
+          )
+          .append(
+            $("<p>")
+              .addClass("card-text")
+              .append(
+                $("<strong>")
+                  // .addClass("text-muted")
+                  .text(`Technologies Used: ${project.technologies.join(", ")}`)
+              )
+          )
+          .append(
+            $("<p>")
+              .addClass("card-text")
+              .append(
+                $("<strong>")
+                  .addClass("text-muted")
+                  .text(`Project Type: ${project.type}`)
+              )
+          )
+          .append(
+            $("<p>")
+              .addClass("card-text")
+              .append(
+                $("<strong>")
+                  // .addClass("text-muted")
+                  .text(`Mark's Role: ${project.role}`)
+              )
+          )
+          .append(() => {
+            if (project.repository != "")
+              return $("<a>")
+                .attr("href", project.repository)
+                .attr("target", "_blank")
+                .append(
+                  $("<button>").html(
+                    `<i class="fas fa-arrow-right"  aria-hidden="true"></i> Go to Repository`
+                  )
+                )
+                .css("font-size", "large");
+          })
+          .append($("<hr>"))
+          .append(() => {
+            return $("<a>")
+              .attr("href", project.link)
+              .attr("target", "_blank")
+              .append(
+                $("<button>").html(
+                  `<i class="fas fa-arrow-right"  aria-hidden="true"></i>  ${project.linkDescription}`
+                )
+              )
+              .css("font-size", "large");
+          })
+      )
+  );
+}
