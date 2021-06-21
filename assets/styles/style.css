@@ -214,8 +214,11 @@ ul li {
   border-radius: 5px;
   align-content: center;
   width: 100%;
+  height: fit-content;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
-.box-2 .card .updateBtn {
+/* .box-2 .card .updateBtn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -223,10 +226,10 @@ ul li {
 }
 .box-2 .card .updateBtn span {
   text-align: left;
-}
+} */
 .box-2 .card {
   width: 500px;
-  height: 600px;
+  height: 700px;
   padding: 15px;
   border-radius: 8px;
   align-items: flex-start;
@@ -245,7 +248,7 @@ ul li {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-.box-2 .card .num {
+/* .box-2 .card .num {
   width: 60px;
   height: 60px;
   padding: 10px;
@@ -253,7 +256,7 @@ ul li {
   margin-bottom: 10px;
   border-radius: 30px;
   border: 2px dashed cadetblue;
-}
+} */
 
 /* .box-2 .card a {
   margin-top: auto;
@@ -458,6 +461,31 @@ ul li {
   .home {
     background-image: none;
     background-color: var(--themeColor4);
+  }
+}
+
+/*the glow effect on the borders*/
+@keyframes glow {
+  0% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgba(255, 6, 255, 0.1);
+  }
+  50% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgba(195, 0, 255, 0.75);
+  }
+  100% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgb(255, 0, 212);
+  }
+}
+
+@keyframes glow-black {
+  0% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgba(175, 27, 175, 0.75);
+  }
+  100% {
+    box-shadow: 1.75px 1.75px 20px 1.25px rgb(255, 0, 255);
   }
 }
 

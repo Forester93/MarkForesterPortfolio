@@ -1,12 +1,7 @@
 # Mark Forester's Portfolio.
 
-## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Contents
 
-• [License](#license)
 • [Description](#description)
 • [Technologies](#technologies)
 • [Links](#links)

@@ -1,49 +1,49 @@
-async function getRepos(user, ...exclude) {
-  try {
-    let repoArr;
-    let userRepo = await fetch(`https://api.github.com/users/${user}/repos`)
-      .then((response) => response.json())
-      .then((response) => {
-        $("#trialRepo").remove();
-        let Repos = $("#repositories");
-        Repos.addClass("bg-black");
-        for (let item of response) {
-          if (exclude.indexOf(item.name) == -1) {
-            let newRepo = $("<article>")
-              .addClass("repository")
-              .append(
-                $("<a>")
-                  .attr("href", `https://www.github.com/${user}/${item.name}`)
-                  .attr("target", "_blank")
-                  .append(
-                    $("<button>").html(
-                      `<i class="fas fa-arrow-right"  aria-hidden="true"></i> ${item.name}`
-                    )
-                  )
-                  .css("font-size", "large")
-              );
+// async function getRepos(user, ...exclude) {
+//   try {
+//     let repoArr;
+//     let userRepo = await fetch(`https://api.github.com/users/${user}/repos`)
+//       .then((response) => response.json())
+//       .then((response) => {
+//         $("#trialRepo").remove();
+//         let Repos = $("#repositories");
+//         Repos.addClass("bg-black");
+//         for (let item of response) {
+//           if (exclude.indexOf(item.name) == -1) {
+//             let newRepo = $("<article>")
+//               .addClass("repository")
+//               .append(
+//                 $("<a>")
+//                   .attr("href", `https://www.github.com/${user}/${item.name}`)
+//                   .attr("target", "_blank")
+//                   .append(
+//                     $("<button>").html(
+//                       `<i class="fas fa-arrow-right"  aria-hidden="true"></i> ${item.name}`
+//                     )
+//                   )
+//                   .css("font-size", "large")
+//               );
 
-            Repos.append(newRepo);
-          }
-        }
-      });
-    return repoArr;
-  } catch (err) {
-    console.log(err);
-  }
-}
-getRepos(
-  "Forester93",
-  "SurveryForm",
-  "Oud",
-  "prework-about-me",
-  "Tabled",
-  "technical-documentation-template",
-  "horiseon-solution-services",
-  "MarkForesterPortfolio",
-  "the-code-tree",
-  "forester93"
-);
+//             Repos.append(newRepo);
+//           }
+//         }
+//       });
+//     return repoArr;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+// getRepos(
+//   "Forester93",
+//   "SurveryForm",
+//   "Oud",
+//   "prework-about-me",
+//   "Tabled",
+//   "technical-documentation-template",
+//   "horiseon-solution-services",
+//   "MarkForesterPortfolio",
+//   "the-code-tree",
+//   "forester93"
+// );
 
 $(document).ready(function () {
   $(".carousel").owlCarousel({
@@ -74,20 +74,6 @@ $(document).ready(function () {
   });
 });
 
-$("#example").remove();
-
-{
-  /* <div class="card" id="example">
-<img class="card-img-top" src="..." alt="Card image cap">
-<div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-        to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-</div>
-</div> */
-}
-
 for (let project of projects) {
   $("#projectsCarousel").append(
     $("<div>")
@@ -103,7 +89,11 @@ for (let project of projects) {
       .append(
         $("<div>")
           .addClass("card-body")
-          .append($("<h5>").addClass("card-title").text(project.name))
+          .append(
+            $("<h5>")
+              .addClass("card-title")
+              .html(`<strong>${project.name}</strong>`)
+          )
           .append(
             $("<p>")
               .addClass("card-text")
