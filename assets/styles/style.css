@@ -39,17 +39,22 @@ html {
   background-color: var(--themeColor4);
   width: 45vw;
 }
-button {
+button,
+.contactButton {
   background: var(--themeColor1);
   color: white;
   padding: 6px 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-button:hover {
+button:hover,
+.contactButton:hover {
   color: var(--themeColor1);
   border: 1px solid var(--themeColor1);
   background-color: var(--themeColor2);
+}
+.contactButton {
+  font-size: 60px;
 }
 .header {
   display: flex;
@@ -388,7 +393,38 @@ ul li {
 /*****************************************************************/
 /* Responsive styling */
 
-/* for smaller tablets (iPad)*/
+/* for smaller tablets (iPad Pro)*/
+@media screen and (max-width: 1024px) {
+  #projects {
+    grid-template-areas:
+      "h1 h1"
+      "content1 content2"
+      "content3 content4"
+      "content5 content6";
+  }
+  .nav-link {
+    font-size: 75%;
+  }
+  .contact-me,
+  .about-me,
+  li,
+  .project-tile h2 {
+    font-size: 100%;
+  }
+  .project-note {
+    font-size: 60%;
+  }
+  ul {
+    margin-left: 3vw;
+  }
+  h1 {
+    font-size: 200%;
+  }
+  .card-columns {
+    column-count: 2;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #projects {
     grid-template-areas:
@@ -418,6 +454,9 @@ ul li {
   .home {
     background-image: none;
     background-color: var(--themeColor4);
+  }
+  .card-columns {
+    column-count: 2;
   }
 }
 
@@ -461,6 +500,9 @@ ul li {
   .home {
     background-image: none;
     background-color: var(--themeColor4);
+  }
+  .card-columns {
+    column-count: 1;
   }
 }
 

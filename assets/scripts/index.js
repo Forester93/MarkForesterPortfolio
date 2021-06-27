@@ -74,10 +74,32 @@ $(document).ready(function () {
   });
 });
 
+{
+  /* <div class="container">
+<div class="card my-2" >
+  <h5 class="card-header">A great title goes here.</h5>
+  <div class="card-body" >
+    <p class="card-text">Your unique content goes here... Write away.</p>
+    <p class="text-muted">- {{account.username}}</p>
+    <button class="launchEntry" data-toggle="modal" data-target="#entryModal">📜 Add Entry</button>
+  </div>
+</div>
+{{#if userEntriesData}}
+    {{#each userEntriesData}}
+    {{> userEntries-details}}
+    {{/each}}
+{{/if}}
+
+
+
+</div> */
+}
+
 for (let project of projects) {
-  $("#projectsCarousel").append(
+  $("#projectsContainer").append(
     $("<div>")
-      .addClass("card")
+      .addClass("card container my-2")
+      .css("display", "inline-block")
       .append(
         $("<img>")
           .addClass("card-img-top")
@@ -91,65 +113,71 @@ for (let project of projects) {
           .addClass("card-body")
           .append(
             $("<h5>")
-              .addClass("card-title")
+              .addClass("card-header")
               .html(`<strong>${project.name}</strong>`)
           )
           .append(
-            $("<p>")
-              .addClass("card-text")
-              .text(`Project Description: ${project.description}`)
-          )
-          .append(
-            $("<p>")
-              .addClass("card-text")
+            $("<div>")
+              .addClass("card-body")
               .append(
-                $("<strong>")
-                  // .addClass("text-muted")
-                  .text(`Technologies Used: ${project.technologies.join(", ")}`)
+                $("<p>")
+                  .addClass("card-text")
+                  .text(`Project Description: ${project.description}`)
               )
-          )
-          .append(
-            $("<p>")
-              .addClass("card-text")
               .append(
-                $("<strong>")
-                  .addClass("text-muted")
-                  .text(`Project Type: ${project.type}`)
-              )
-          )
-          .append(
-            $("<p>")
-              .addClass("card-text")
-              .append(
-                $("<strong>")
-                  // .addClass("text-muted")
-                  .text(`Mark's Role: ${project.role}`)
-              )
-          )
-          .append(() => {
-            if (project.repository != "")
-              return $("<a>")
-                .attr("href", project.repository)
-                .attr("target", "_blank")
-                .append(
-                  $("<button>").html(
-                    `<i class="fas fa-arrow-right"  aria-hidden="true"></i> Go to Repository`
+                $("<p>")
+                  .addClass("card-text")
+                  .append(
+                    $("<strong>")
+                      // .addClass("text-muted")
+                      .text(
+                        `Technologies Used: ${project.technologies.join(", ")}`
+                      )
                   )
-                )
-                .css("font-size", "large");
-          })
-          .append($("<hr>"))
-          .append(() => {
-            return $("<a>")
-              .attr("href", project.link)
-              .attr("target", "_blank")
-              .append(
-                $("<button>").html(
-                  `<i class="fas fa-arrow-right"  aria-hidden="true"></i>  ${project.linkDescription}`
-                )
               )
-              .css("font-size", "large");
-          })
+              .append(
+                $("<p>")
+                  .addClass("card-text")
+                  .append(
+                    $("<strong>")
+                      .addClass("text-muted")
+                      .text(`Project Type: ${project.type}`)
+                  )
+              )
+              .append(
+                $("<p>")
+                  .addClass("card-text")
+                  .append(
+                    $("<strong>")
+                      // .addClass("text-muted")
+                      .text(`Mark's Role: ${project.role}`)
+                  )
+              )
+              .append(() => {
+                if (project.repository != "")
+                  return $("<a>")
+                    .attr("href", project.repository)
+                    .attr("target", "_blank")
+                    .append(
+                      $("<button>").html(
+                        `<i class="fas fa-arrow-right"  aria-hidden="true"></i> Go to Repository`
+                      )
+                    )
+                    .css("font-size", "large");
+              })
+              .append($("<hr>"))
+              .append(() => {
+                return $("<a>")
+                  .attr("href", project.link)
+                  .attr("target", "_blank")
+                  .append(
+                    $("<button>").html(
+                      `<i class="fas fa-arrow-right"  aria-hidden="true"></i>  ${project.linkDescription}`
+                    )
+                  )
+                  .css("font-size", "large");
+              })
+          )
       )
   );
 }

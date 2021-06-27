@@ -136,4 +136,23 @@ let projects = [
     link: "https://forester93.github.io/gatekeeper-password-generator/",
     linkDescription: "Link to Deployed Application",
   },
+  {
+    name: "BlogO4 Tech Hub",
+    type: "Full Stack",
+    role: "Sole Author",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "MySQL",
+      "MySQL2",
+    ],
+    description:
+      "An online tech blog where one gets to share their great ideas with the world.",
+    repository: "",
+    link: "https://blogo4-notfound.herokuapp.com/home",
+    linkDescription: "Link to Deployed Application",
+  },
 ];
