@@ -155,4 +155,15 @@ let projects = [
     link: "https://blogo4-notfound.herokuapp.com/home",
     linkDescription: "Link to Deployed Application",
   },
+  {
+    name: "Ready Set Go",
+    type: "Full Stack",
+    role: "Backend Developer",
+    technologies: ["HTML", "CSS", "JavaScript", "NodeJS", "ExpressJS", "NoSQL"],
+    description:
+      "A lightweight fitness tracker tool to help you be on top of your exercises and fitness goals!",
+    repository: "https://github.com/Forester93/ready-set-go",
+    link: "https://readysetgoau.herokuapp.com/",
+    linkDescription: "Link to Deployed Application",
+  },
 ];
