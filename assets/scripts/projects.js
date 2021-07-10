@@ -166,4 +166,24 @@ let projects = [
     link: "https://readysetgoau.herokuapp.com/",
     linkDescription: "Link to Deployed Application",
   },
+  {
+    name: "How Much Dollar",
+    type: "Full Stack",
+    role: "Full Stack Developer",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "NoSQL",
+      "IndexedDB",
+      "PWA",
+    ],
+    description:
+      "Light-weight PWA application that you can install to your phone or desktop to seamlessly track your expenditures progressively.",
+    repository: "https://github.com/Forester93/howmuchdollars",
+    link: "https://howmuchdollars.herokuapp.com/",
+    linkDescription: "Link to Deployed Application",
+  },
 ];
